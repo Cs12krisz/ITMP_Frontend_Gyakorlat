@@ -7,7 +7,7 @@ function Mod() {
     const id = params.id;
     return(
         <>
-            <h1>Módosítani egy elemen</h1>
+            <h1>Módosítani az elemen</h1>
             <form method="post" onSubmit={(event) => {
                 event.preventDefault()
                 event.persist();
@@ -34,7 +34,7 @@ function Mod() {
             <label htmlFor="nev">Név</label>
             <input type="text" name="nev"  /><br/>
             <label htmlFor="email">Email</label>
-            <input type="text" name="email"  />
+            <input type="text" name="email"  /><br/>
             <input type="submit" />
             </form>
         </>

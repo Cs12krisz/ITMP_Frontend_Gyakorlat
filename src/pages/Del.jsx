@@ -8,15 +8,17 @@ function Del() {
     const id = params.id;
 
         useEffect(() => {
-            axios
-            .delete(`https://itmp.sulla.hu/users/${id}`)
-            .then((tartalom) => {
-                setAdat(tartalom.data.message)    
-            })
-            .catch((error) => {
+           const fetchData = async () => {
+
+           try {
+               const tartalom = await axios.delete(`https://itmp.sulla.hu/users/${id}`)
+               setAdat(tartalom.data.message)
+            }
+            catch (error){
                 console.log(error)
-            })
-        })
+            }
+            }; fetchData();
+        }, [id])
 
         return(
         <>
